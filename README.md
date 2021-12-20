@@ -63,9 +63,14 @@ If all works correctly, you can now clone repos to your TPU VM.
 Create an alias for Python3:
 ```bash
 echo "alias python='python3'" >> .bashrc
-echo "export EDITOR='vim'" >> .bashrc
 ```
 This helps you avoid invoking Python2.
+
+Configure your editor (In my case, Vim):
+```bash
+echo "export EDITOR='vim'" >> .bashrc
+```
+Apps like Git would invoke your preferred editor based on this environment variable.
 
 ## Installing JAX
 
@@ -125,11 +130,21 @@ set splitbelow
 syntax on
 let mapleader = " "
 ```
+These configurations are focused on:
+- Tabs and indention: Set tabs to 4 spaces
+- Line number and searching highlight
+- Tmux compatability
+- Split pane preferences
+- Set map leader key for Easy Motion.
 
 Install Vim plugins:
 ```bash
 vim -c "PlugInstall"
 ```
+- Easy Motion: Advanced cursor movement
+- Sandwich: Brackets (e.g. (),[],"") editing
+- Awesome Vim colorschemes: Colorschemes
+- Polygot: Syntax highlighting
 
 ## EndNote
 
