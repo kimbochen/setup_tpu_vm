@@ -48,6 +48,11 @@ Add your SSH private key to the agent:
 ssh-add ~/.ssh/id_ed25519
 ```
 
+> Sidenote: If you want to add the key to a new server, do this instead of copying the key:
+> ```bash
+> ssh-copy-id -i <public_key> <root@ip_address>
+> ```
+
 At GitHub, select upper-right avatar icon, go to **Settings > SSH and GPG keys**.  
 Add the public key to the list of keys.
 
